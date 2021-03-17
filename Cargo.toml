@@ -1,0 +1,15 @@
+[package]
+name = "stringslice"
+version = "0.1.0"
+authors = ["Lucas Jansen <7199136+staticintlucas@users.noreply.github.com>"]
+edition = "2018"
+description = "A collection of methods to slice strings based on character indices rather than bytes"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies.cargo-husky]
+version = "1"
+default-features = false # Disable features which are enabled by default
+features = ["precommit-hook", "run-cargo-test", "run-cargo-clippy", "run-cargo-fmt"]
