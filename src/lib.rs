@@ -55,7 +55,8 @@ fn range_to_begin_end(range: impl RangeBounds<usize>) -> (usize, usize) {
     let end = match range.end_bound() {
         Bound::Included(&b) => b + 1,
         Bound::Excluded(&b) => b,
-        Bound::Unbounded => usize::MAX,
+        // Note: using core::usize::MAX rather than usize::MAX for compatibility with Rust < 1.43
+        Bound::Unbounded => core::usize::MAX,
     };
 
     (begin, end)

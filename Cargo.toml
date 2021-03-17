@@ -2,7 +2,6 @@
 name = "stringslice"
 version = "0.1.0"
 authors = ["Lucas Jansen <7199136+staticintlucas@users.noreply.github.com>"]
-edition = "2018"
 description = "A collection of methods to slice strings based on character indices rather than bytes"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
