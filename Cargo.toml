@@ -6,6 +6,9 @@ edition = "2018"
 description = "A collection of methods to slice strings based on character indices rather than bytes"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/staticintlucas/stringslice"
+keywords = ["string", "slice", "substring", "unicode", "utf-8"]
+categories = ["no-std"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
