@@ -3,7 +3,6 @@
 [![Build status](https://img.shields.io/github/workflow/status/staticintlucas/stringslice/Build?style=flat-square)][build]
 [![Test status](https://img.shields.io/github/workflow/status/staticintlucas/stringslice/Test?label=tests&style=flat-square)][tests]
 [![Code coverage](https://img.shields.io/codecov/c/gh/staticintlucas/stringslice?style=flat-square)][coverage]
-[![Code quality](https://img.shields.io/codefactor/grade/github/staticintlucas/stringslice?style=flat-square)][code quality]
 [![Crate version](https://img.shields.io/crates/v/stringslice?style=flat-square)][version]
 [![Rust version](https://img.shields.io/badge/rust-1.30%2B-informational?style=flat-square)][rust version]
 [![Downloads](https://img.shields.io/crates/d/stringslice?style=flat-square)][downloads]
