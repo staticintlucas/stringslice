@@ -45,6 +45,7 @@
 
 use core::ops::{Bound, RangeBounds};
 
+#[inline]
 fn range_to_begin_end(range: impl RangeBounds<usize>) -> (usize, usize) {
     let begin = match range.start_bound() {
         Bound::Included(&b) => b,
@@ -145,7 +146,6 @@ impl StringSlice for str {
             .expect("begin < end when slicing string")
     }
 
-    #[inline]
     fn try_substring(&self, begin: usize, end: usize) -> Option<&str> {
         if begin > end {
             None
