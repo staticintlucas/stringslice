@@ -1,7 +1,7 @@
 //! A collection of methods to slice strings based on character indices rather than bytes.
 //!
 //! This crate implements the [`StringSlice`] trait for [`&str`],
-//! which contains various methods to slice the string.
+//! containing the [`slice`], [`try_slice`], [`substring`], and [`try_substring`] methods.
 //!
 //! # Examples
 //!
