@@ -16,7 +16,6 @@ containing the `slice`, `try_slice`, `substring`, and `try_substring` methods.
 
 * Uses primitive `&str` and standard `String` types
 * `#[no_std]` compatible by default
-* No `unsafe` code
 * Small footprint
   * ~50 LoC excluding blank lines, comments, and tests
   * No additional dependencies (only dev-dependencies)

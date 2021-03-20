@@ -156,7 +156,10 @@ impl StringSlice for str {
             let begin_ch = ch_idx.nth(begin).unwrap_or(len);
             let end_ch = ch_idx.nth(end - begin - 1).unwrap_or(len);
 
-            Some(&self[begin_ch..end_ch])
+            // Note (unsafe): Since we iterate character indeces we can be sure that `begin_ch` and
+            // `end_ch` are on UTF-8 boundaries. For performance we use get_unchecked rather than
+            // simply indexing.
+            unsafe { Some(&self.get_unchecked(begin_ch..end_ch)) }
         }
     }
 }
@@ -166,6 +169,14 @@ mod tests {
     use core::ops::Bound;
 
     use super::StringSlice;
+
+    #[test]
+    fn test_utf8() {
+        let str = "🗻∈🌏";
+        assert_eq!("🗻", str.slice(0..1));
+        assert_eq!("∈", str.slice(1..2));
+        assert_eq!("🌏", str.slice(2..3));
+    }
 
     #[test]
     #[should_panic]
