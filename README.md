@@ -1,11 +1,13 @@
-# `stringslice`
+# stringslice &emsp; [![Test status]][tests]&thinsp;[![Test coverage]][codecov]&thinsp;[![Crate version]][crates]&thinsp;[![Rust version]][crates]
 
-[![Build status](https://img.shields.io/github/workflow/status/staticintlucas/stringslice/Build?style=flat-square)][build]
-[![Test status](https://img.shields.io/github/workflow/status/staticintlucas/stringslice/Test?label=tests&style=flat-square)][tests]
-[![Code coverage](https://img.shields.io/codecov/c/gh/staticintlucas/stringslice?style=flat-square)][coverage]
-[![Crate version](https://img.shields.io/crates/v/stringslice?style=flat-square)][version]
-[![Rust version](https://img.shields.io/badge/rust-1.30%2B-informational?style=flat-square)][rust version]
-[![Downloads](https://img.shields.io/crates/d/stringslice?style=flat-square)][downloads]
+[test status]: https://img.shields.io/github/actions/workflow/status/staticintlucas/stringslice/test.yml?branch=main&label=tests&style=flat-square
+[test coverage]: https://img.shields.io/codecov/c/gh/staticintlucas/stringslice?style=flat-square
+[crate version]: https://img.shields.io/crates/v/stringslice?style=flat-square
+[rust version]: https://img.shields.io/badge/rust-1.30%2B-informational?style=flat-square
+
+[tests]: https://github.com/staticintlucas/stringslice/actions/workflows/test.yml
+[codecov]: https://app.codecov.io/gh/staticintlucas/stringslice
+[crates]: https://crates.io/crates/stringslice
 
 A collection of methods to slice strings based on character indices rather than bytes.
 
@@ -26,7 +28,7 @@ Add `stringslice` to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-stringslice = "0.1"
+stringslice = "0.2"
 ```
 
 ## Examples
@@ -58,25 +60,18 @@ use stringslice::StringSlice;
 assert_eq!("string".try_slice(4..2), None);
 ```
 
-## Documentation
-
-* [API reference on docs.rs][docs]
-
-[build]: https://github.com/staticintlucas/stringslice/actions/workflows/build.yml
-[tests]: https://github.com/staticintlucas/stringslice/actions/workflows/test.yml
-[coverage]: https://app.codecov.io/gh/staticintlucas/stringslice
-[code quality]: https://www.codefactor.io/repository/github/staticintlucas/stringslice/
-[version]: https://crates.io/crates/stringslice
-[rust version]: https://crates.io/crates/stringslice
-[downloads]: https://crates.io/crates/stringslice
-
-[docs]: https://docs.rs/stringslice/latest/stringslice/
-
 ## Licence
 
 Licensed under either of
 
-* Apache License, Version 2.0, ([LICENCE-APACHE](LICENCE-APACHE) or [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0))
-* MIT license ([LICENCE-MIT](LICENCE-MIT) or [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))
+* Apache License, Version 2.0 ([LICENCE-APACHE](LICENCE-APACHE) or [http://www.apache.org/licenses/LICENSE-2.0][apache-licence])
+* MIT license ([LICENCE-MIT](LICENCE-MIT) or [http://opensource.org/licenses/MIT][mit-licence])
 
 at your option.
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in
+this crate by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without
+any additional terms or conditions.
+
+[apache-licence]: http://www.apache.org/licenses/LICENSE-2.0
+[mit-licence]: http://opensource.org/licenses/MIT
