@@ -154,9 +154,13 @@ impl StringSlice for str {
 
             let len = self.len();
             let begin_ch = ch_idx.nth(begin).unwrap_or(len);
-            let end_ch = ch_idx.nth(end - begin - 1).unwrap_or(len);
+            let end_ch = if end > begin {
+                ch_idx.nth(end - begin - 1).unwrap_or(len)
+            } else {
+                begin_ch
+            };
 
-            // Note (unsafe): Since we iterate character indeces we can be sure that `begin_ch` and
+            // Note (unsafe): Since we iterate character indices we can be sure that `begin_ch` and
             // `end_ch` are on UTF-8 boundaries. For performance we use get_unchecked rather than
             // simply indexing.
             unsafe { Some(&self.get_unchecked(begin_ch..end_ch)) }
@@ -176,6 +180,14 @@ mod tests {
         assert_eq!("🗻", str.slice(0..1));
         assert_eq!("∈", str.slice(1..2));
         assert_eq!("🌏", str.slice(2..3));
+    }
+
+    #[test]
+    fn test_zero_len() {
+        let str = "test";
+        assert_eq!("", str.slice(0..0));
+        assert_eq!("", str.slice(..0));
+        assert_eq!("", str.slice(1..1));
     }
 
     #[test]
