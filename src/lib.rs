@@ -163,7 +163,7 @@ impl StringSlice for str {
             // Note (unsafe): Since we iterate character indices we can be sure that `begin_ch` and
             // `end_ch` are on UTF-8 boundaries. For performance we use get_unchecked rather than
             // simply indexing.
-            unsafe { Some(&self.get_unchecked(begin_ch..end_ch)) }
+            unsafe { Some(self.get_unchecked(begin_ch..end_ch)) }
         }
     }
 }
