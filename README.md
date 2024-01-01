@@ -1,4 +1,4 @@
-# stringslice &emsp; [![Test status]][tests]&thinsp;[![Test coverage]][codecov]&thinsp;[![Crate version]][crates]&thinsp;[![Rust version]][crates]
+# stringslice&emsp;[![Test status]][tests]&thinsp;[![Test coverage]][codecov]&thinsp;[![Crate version]][crates]&thinsp;[![Rust version]][crates]
 
 [test status]: https://img.shields.io/github/actions/workflow/status/staticintlucas/stringslice/test.yml?branch=main&label=tests&style=flat-square
 [test coverage]: https://img.shields.io/codecov/c/gh/staticintlucas/stringslice?style=flat-square
